@@ -1,0 +1,17 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"],
+  "files.exclude": {
+    "**/__tests__": true,
+    "**/.bundle": true,
+    "**/.gitignore": false,
+    "**/.watchman*": true,
+    "**/*.config.js": true,
+    "**/*.lock": true,
+    "**/Gem*": true,
+    "**/node_modules": true,
+    // "**/src/*/package.json": true
+  }
+}

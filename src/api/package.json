@@ -1,0 +1,4 @@
+{
+    "name": "@app/api",
+    "main": "index.ts"
+}

@@ -1,0 +1,4 @@
+{
+    "name": "@app/storage",
+    "main": "index.ts"
+}
