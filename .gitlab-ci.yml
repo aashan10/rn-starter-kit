@@ -33,9 +33,9 @@ prepare-android-environment:
     # install android sdk platform tools
     - curl https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -L -o android_sdk.zip
     - mkdir android_sdk && unzip android_sdk.zip -d ./android_sdk/
-    - export ANDROID_HOME=$(pwd)/android_sdk
+    - export ANDROID_HOME=$(pwd)/android_sdk/cmdline_tools
     - export PATH=$PATH:$ANDROID_HOME/bin
-    - cd $ANDROID_HOME/bin && yes | ./sdkmanager --licenses
+    - cd $ANDROID_HOME/bin && chmod +x sdkmanager && yes | ./sdkmanager --licenses
 
 
 download-signing-keystore:
@@ -61,7 +61,7 @@ build-release-aab:
     - prepare-android-environment
     - download-signing-keystore
   script:
-    - cd android && ./gradlew bundleRelease
+    - cd android && chmod +x gradlew && ./gradlew bundleRelease
 
 build-release-apk:
   stage: build
@@ -70,7 +70,7 @@ build-release-apk:
     - prepare-android-environment
     - download-signing-keystore
   script:
-    - cd android && ./gradlew assembleRelease
+    - cd android && chmod +x gradlew && ./gradlew assembleRelease
 
 publish-artifacts:
   stage: release
