@@ -29,8 +29,8 @@ prepare-android-environment:
     - apt-get install software-properties-common
     - add-apt-repository ppa:openjdk-r/ppa
     - apt-get update && apt-get -y upgrade
-    - apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
-    - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    - apt-get install libc6-dev-i386 lib32z1 openjdk-11-jre-headless
+    - export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
     # install android sdk platform tools
     - curl https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -L -o android_sdk.zip
