@@ -152,6 +152,13 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+
+        release {
+            storeFile file("./" + "$System.env.RELEASE_KEYSTORE")
+            storePassword "$System.env.RELEASE_KEYSTORE_PASSWORD"
+            keyAlias "$System.env.RELEASE_KEYSTORE_ALIAS"
+            keyPassword "$System.env.RELEASE_KEYSTORE_PASSWORD"
+        }
     }
     buildTypes {
         debug {
