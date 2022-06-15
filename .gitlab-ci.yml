@@ -33,7 +33,7 @@ prepare-android-environment:
     # install android sdk platform tools
     - curl https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -L -o android_sdk.zip
     - mkdir android_sdk && unzip android_sdk.zip -d ./android_sdk/
-    - export ANDROID_HOME=$(pwd)/android_sdk/cmdline_tools
+    - export ANDROID_HOME=$(pwd)/android_sdk/cmdline-tools
     - export PATH=$PATH:$ANDROID_HOME/bin
     - cd $ANDROID_HOME/bin && chmod +x sdkmanager && yes | ./sdkmanager --licenses
 
