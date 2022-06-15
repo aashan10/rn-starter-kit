@@ -26,8 +26,8 @@ prepare-android-environment:
   allow_failure: false
   script:
     # install JDK
-    - apt update && apt upgrade
-    - apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
+    - apt update && apt -y upgrade
+    - apt install libc6-dev-i386 lib32z1 openjdk-8-jdk
     - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
     # install android sdk platform tools
