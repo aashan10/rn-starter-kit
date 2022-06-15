@@ -19,17 +19,17 @@ prepare-node-environment:
     # install yarn
     - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
     - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-    - apt update && apt install yarn
+    - apt-get update && apt-get install yarn
 
 prepare-android-environment:
   stage: prepare
   allow_failure: false
   script:
     # install JDK
-    - apt install software-properties-common
+    - apt-get install software-properties-common
     - add-apt-repository ppa:openjdk-r/ppa
-    - apt update && apt -y upgrade
-    - apt install libc6-dev-i386 lib32z1 openjdk-8-jdk
+    - apt-get update && apt-get -y upgrade
+    - apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk
     - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
     # install android sdk platform tools
