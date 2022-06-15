@@ -27,7 +27,7 @@ prepare-android-environment:
   script:
     # install JDK
     - apt-get update && apt-get -y upgrade
-    - apt-get install openjdk-11-jre-headless
+    - apt-get install -y openjdk-11-jre-headless
     - export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
     # install android sdk platform tools
